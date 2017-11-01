@@ -29,18 +29,18 @@
 
 // START Editing Project Variables.
 // Project related.
-var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'wpgulp.dev'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
+var project                 = 'RYP TK'; // Project Name.
+var projectURL              = 'localhost:8888/RYP_tk'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.
-var text_domain             = 'WPGULP'; // Your textdomain here.
-var translationFile         = 'WPGULP.pot'; // Name of the transalation file.
+var text_domain             = 'RYP_TK'; // Your textdomain here.
+var translationFile         = 'RYP_TK.pot'; // Name of the transalation file.
 var translationDestination  = './languages'; // Where to save the translation files.
 var packageName             = 'WPGULP'; // Package name.
-var bugReport               = 'https://AhmadAwais.com/contact/'; // Where can users report bugs.
-var lastTranslator          = 'Ahmad Awais <your_email@email.com>'; // Last translator Email ID.
-var team                    = 'WPTie <your_email@email.com>'; // Team's Email ID.
+var bugReport               = ''; // Where can users report bugs.
+var lastTranslator          = ''; // Last translator Email ID.
+var team                    = ''; // Team's Email ID.
 
 // Style related.
 var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
@@ -319,7 +319,7 @@ gulp.task( 'browser-sync', function() {
   */
  gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
+  gulp.watch( styleWatchFiles, [ 'styles', reload ] ); // Reload on SCSS file changes.
   gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
  });
