@@ -177,7 +177,6 @@ display: block;
 
 /* Here some needed widget styles
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
-.widget { margin-bottom: 2em; }
 .widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
@@ -267,5 +266,491 @@ nav .form-control {
 }
 
 a {
-	color: red;
+	color: blue;
+}
+
+//* BI STYLES *//
+
+$ryp-color: #00B0DF;
+$secondary-color: #eaeaea;
+//* HEADER *//
+
+.site-header .container-fluid {
+	@media screen and (max-width:768px){
+			padding: 15px;
+		}
+	}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.hero {
+	position: relative;
+	background-color: $secondary-color;
+
+	img {
+		width: 100%;
+	}
+	&:after {
+	  content  : "";
+	  position : absolute;
+	  z-index  : 1;
+	  bottom   : 0;
+	  left     : 0;
+	  pointer-events   : none;
+	  background-image : linear-gradient(to bottom, 
+	                    rgba(255,255,255, 0), 
+	                    rgba(255,255,255, 1) 90%);
+	  width    : 100%;
+	  height   : 4em;
+
+	  @media screen and (max-width: 992px) {
+	  	height: 2em;
+	  }
+	  @media screen and (max-width: 768px) {
+	  	height: 1em;
+	  }
+	}
+}
+
+.hero-cta {
+	background-color: $secondary-color;
+}
+
+.site-header-widget {
+
+	text-align: right;
+
+	@media screen and (max-width: 768px){
+		text-align: center;
+	}
+
+	input[type=search] {
+		border-radius: 100px;
+		height: 28px;
+	}
+
+	form {
+		text-align: right;
+
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}	
+	}
+
+	.widget_custom_html, .widget_lsi_widget {
+		display: inline-block;
+	}
+
+	.widget_custom_html {
+		padding: 0px 10px;
+
+		.btn-primary {
+			box-shadow: none;
+		}
+	}
+}
+
+/* NAV */
+
+.site-navigation-inner {
+	padding: 0px;
+}
+
+.navbar-nav {
+    float: none;
+    text-align: center;
+
+	li {
+	    float: none;
+	    display: inline-block;
+	}
+}
+
+.navbar-default {
+	background: black;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 0px;
+	border-radius: 0px;
+	margin: 0;
+
+	.navbar-nav>li>a {
+		color: white;
+	}
+
+	.navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover, .navbar-nav>li>a:focus, .navbar-nav>li>a:hover {
+		background: transparent;
+		color: $ryp-color;
+	}
+}
+
+.navabr {
+	min-height: 0px;
+}
+
+@media (max-width: 768px){
+	.navbar-nav>li {
+		display: block;
+	}
+	.lsi-social-icons, .site-branding {
+		text-align: center!important;
+	}
+}
+
+.mobile-nav {
+	text-align: center;
+	padding: 15px 30px;
+    border-right: solid 1px #444444;
+    border-left: solid 1px #444444;
+    color: white;
+
+    &:hover {
+    	background: #131313;
+    	cursor: pointer;
+    }
+}
+
+
+/* GENERAL */
+
+* {
+	font-family: 'montserrat', sans-serif;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: black;
+	}
+
+	p {
+		color: #3e3e3e;
+	}
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.center {
+	text-align: center;
+}
+
+.default-padding {
+    padding: 5% 10%;
+}
+
+a {
+	color: $ryp-color;
+	font-weight: bold;
+	transition: all .4s ease;
+
+	&:hover {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+
+
+/* EVENTS HOME */
+.home-event-photo {
+    max-width: 100%;
+    box-shadow: 2px 2px 10px -1px rgba(125,125,125,1);
+}
+
+.events-home {
+    text-align: center;
+	.col-md-4 a {
+		color: black;
+		transition: all .4s ease;
+		&:hover, &:focus, &:active {
+			color: #00B8E0;
+			text-decoration: none;
+		}
+	}
+	h2 {
+	    border-bottom: solid $secondary-color 4px;
+	    padding-bottom: 20px;
+	    font-weight: bold;
+	    margin-bottom: 20px;
+	}
+
+	 h4 {
+	    padding-bottom: 10px;
+	    border-bottom: solid $secondary-color 4px;
+	    margin-bottom: 2px;
+	    font-weight: bold;
+	}
+
+	.col-md-4 {
+		padding-bottom: 30px;
+	}
+
+	.btn-primary {
+	    color: #fff;
+	    background-color: #000000;
+	    border-radius: 100px;
+	    border: none;
+	    font-size: 18px;
+	    padding: 10px 50px;
+	    transition: all .5s ease;
+
+	    &:hover {
+	    	background-color: #47b6de;
+	    }
+	}
+
+	.photo-bg {
+		background-color: #47b6de;
+	    max-width: 500px;
+	    margin: 0 auto;
+	
+		img {
+			transition: all .5s ease;
+			width: 100%;
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+}
+
+
+/* HOME */
+
+.bg-1 {
+	background: url(http://localhost:8888/RYP_tk/wp-content/uploads/2018/03/cross-hatch.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+	.btn, input {
+		box-shadow: 2px 2px 10px -1px rgba(175,175,176,1);
+	}
+}
+
+.bg-2 {
+	background: url(https://images.unsplash.com/photo-1494094255046-3d8318b0ef3e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=de6e13b801e97815660fdf9f69918465&auto=format&fit=crop&w=800&q=80);
+	background-size: cover;
+	background-attachment: fixed;
+
+	.btn, input {
+		box-shadow: 2px 2px 10px -1px #585858;
+	}
+}
+
+.overlay {
+    background: rgba(68, 177, 224, 0.41);
+}
+
+.gray-bg {
+	background: $secondary-color;
+}
+
+.icon {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+	img {
+		max-width: 100px;
+		display: block;
+		margin: 0 auto;
+		transition: all .5s ease;
+
+		&:hover {
+		    transform: scale(1.1);
+		}
+	}
+
+	h4 {
+	    text-align: center;
+	    border-bottom: solid 3px $secondary-color;
+	    padding-bottom: 10px;
+	}
+
+	a {
+		color: black;
+
+		&:hover {
+			color: $ryp-color;
+		}
+	}
+}
+
+.btn {
+	box-shadow: 2px 2px 10px -1px rgba(125,125,125,1);
+	transition: all .5s ease;
+}
+
+.btn-primary {
+    background-color: #44b1e0;
+    border-color: #44b1e0;
+    border-radius: 200px;
+
+    &:visited, &:focus, &:hover {
+    	background-color: black;
+    	border-color: black;
+    }
+
+    .yikes-mailchimp-submit-button-span-text {
+    	color: white;
+    }
+}
+
+.yikes-easy-mc-success-message, .yikes-mailchimp-container .yikes-easy-mc-success-message {
+    color: #44b1e0;
+    background: #d8e5ea;
+    border-radius: 100px;
+}
+
+.hero-cta, .cta {
+
+	.yikes-easy-mc-form input[type=email]:focus, .yikes-easy-mc-form input[type=number]:focus, .yikes-easy-mc-form input[type=text]:focus, .yikes-easy-mc-form input[type=url]:focus, .yikes-easy-mc-form select:focus {
+		outline: 0px;
+	}
+	input {
+		border-radius: 200px;
+	}
+
+	label {
+
+		@media screen and (min-width: 992px) {
+			margin-bottom: 0px!important;
+		}
+		&:focus {
+			border: 0px;
+		}
+	}
+	.yikes-easy-mc-form input[type=email], .yikes-easy-mc-form input[type=number], .yikes-easy-mc-form input[type=text], .yikes-easy-mc-form input[type=url], .yikes-easy-mc-form select {
+	    padding: 10px;
+	    border-color: #f1f1f1;
+	    background: white;
+
+	    @media screen and (min-width: 992px) {
+		    margin-bottom: 0px;
+		}
+	}
+
+	@media screen and (max-width: 992px){
+		.yikes-easy-mc-form label.label-inline, .yikes-easy-mc-form .submit-button-inline-label {
+			width: 45%;
+			float: none;
+		}
+	}
+	@media screen and (max-width: 768px){
+		.yikes-easy-mc-form label.label-inline, .yikes-easy-mc-form .submit-button-inline-label {
+			width: 100%;
+			padding: 0px;
+		}
+	}
+}
+
+.sponsors h3 {
+    text-align: center;
+    border-bottom: solid 3px $secondary-color;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+}
+
+.pum {
+	.yikes-easy-mc-form input[type=email], .yikes-easy-mc-form input[type=number], .yikes-easy-mc-form input[type=password], .yikes-easy-mc-form input[type=text], .yikes-easy-mc-form input[type=url], .yikes-easy-mc-form select, .yikes-easy-mc-form textarea {
+	    border-radius: 100px;
+	}
+	.yikes-easy-mc-form input[type=email]:focus, .yikes-easy-mc-form input[type=number]:focus, .yikes-easy-mc-form input[type=text]:focus, .yikes-easy-mc-form input[type=url]:focus, .yikes-easy-mc-form select:focus {
+		outline: 0px;
+	}
+
+	h3 {
+		border-bottom: solid 3px $secondary-color;
+		padding-bottom: 10px;
+	}
+}
+
+.tagline {
+	.btn {
+	    font-size: 18px;
+	    padding: 10px 50px;
+	}
+}
+
+
+
+/* FOOTER */
+
+.main-footer {
+    background: $secondary-color;
+    padding: 15px 30px;
+
+	.footer {
+		margin: 15px 0px;
+
+	}
+    a {
+    	color: #000000;
+    	font-weight: bold;
+
+    	&:hover {
+    		color: $ryp-color;
+    	}
+    }
+
+    h4 {
+	    border-bottom: solid 3px #e2e0e0;
+	    padding-bottom: 10px;
+    }
+
+    .boardLinks {
+	    margin-top: 30px;
+	    font-size: 13px;
+    }
+
+}
+.site-info {
+	background: black;
+	padding: 10px;
+
+	p {
+		color: white;
+	}
+
+	a {
+		font-weight: bold;
+		color: #ffffff;
+
+		&:hover {
+			color: $ryp-color;
+		}
+	}
+}
+
+.footer-menu {
+
+	padding-top: 10px;
+
+	li {
+		display: inline-block;
+
+		a {
+		    border-right: thin solid #dcdcdc;
+		    padding-right: 5px;
+		    font-size: 12px;
+	        font-weight: 500;
+		}
+
+		&:last-child > a {
+			border-right: none;
+		}
+	}
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
 }

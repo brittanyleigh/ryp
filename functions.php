@@ -72,6 +72,7 @@ function _tk_setup() {
 	*/
 	register_nav_menus( array(
 		'primary'  => __( 'Header bottom menu', '_tk' ),
+		'footer'  => __( 'Footer Menu', '_tk' ),
 		) );
 
 }
@@ -87,6 +88,60 @@ function _tk_widgets_init() {
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'Header', '_tk' ),
+		'id'            => 'header-widget',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'Hero', '_tk' ),
+		'id'            => 'hero',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 1', '_tk' ),
+		'id'            => 'footer1',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 2', '_tk' ),
+		'id'            => 'footer2',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 3', '_tk' ),
+		'id'            => 'footer3',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'Call to Action', '_tk' ),
+		'id'            => 'cta',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 		) );

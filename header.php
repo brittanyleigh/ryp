@@ -26,17 +26,8 @@
 
 <header id="masthead" class="site-header" role="banner">
 	<div class="container-fluid">
-		<div class="row">
-			<div class="site-header-inner col-sm-3">
-				
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				<?php } // end if ( ! empty( $header_image ) ) ?>
-
-
+		<div class="row flex">
+			<div class="site-header-inner col-sm-4 col-xs-12">
 				<div class="site-branding">
 
 					<?php
@@ -51,16 +42,44 @@
 					
 				</div>
 			</div>
-			<div class="site-navigation-inner col-sm-9">
+			<div class="col-sm-8 col-xs-12 site-header-widget">
+				<?php if (dynamic_sidebar( 'header-widget' ) ) : 
+					get_sidebar('header-widget');
+					endif;
+				?>
+			</div>
+		</div>
+	</div><!-- .container -->
+</header><!-- #masthead -->
+
+<nav class="site-navigation">
+<?php // substitute the class "container-fluid" below if you want a wider content area ?>
+	<div class="container-fluid">
+		<div class="row">
+			
+			<div class="site-navigation-inner col-xs-12">
 					<div class="navbar navbar-default">
-						<div class="navbar-header">
+						<div class="navbar-header row">
+							<a href="http://localhost:8888/RYP_tk/events">
+								<div class="col-xs-4 hidden-sm hidden-md hidden-lg mobile-nav mn-1">
+									EVENTS
+								</div>
+							</a>
+							<a href="http://localhost:8888/RYP_tk/contact">
+								<div class="col-xs-4 hidden-sm hidden-md hidden-lg mobile-nav mn-2">
+									CONTACT
+								</div>
+							</a>
+							<div class="col-xs-4 hidden-sm hidden-md hidden-lg mobile-nav mn-3" data-toggle="collapse" data-target="#navbar-collapse">
+								MORE
+							</div>
+							<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
 							<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-								<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
+							<!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
-							</button>
+							</button>-->
 						</div>
 
 						<!-- The WordPress Menu goes here -->
@@ -79,24 +98,15 @@
 						); ?>
 
 					</div><!-- .navbar -->
-				</div><!-- site-nav -->
-
-		</div>
-	</div><!-- .container -->
-</header><!-- #masthead -->
-
-<nav class="site-navigation">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			
+			</div><!-- site-nav -->
 		</div>
 	</div><!-- .container -->
 </nav><!-- .site-navigation -->
 
+
+
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
+	<div class="container-fluid" id="content">
+			
 

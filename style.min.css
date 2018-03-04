@@ -27,11 +27,104 @@ embed,iframe,object{max-width:100%}
 .dropdown-submenu:active>a:after{border-left-color:#fff}
 .dropdown-submenu.pull-left{float:none}
 .dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;border-radius:6px 0 6px 6px}
-.widget{margin-bottom:2em}
 .widget_nav_menu ul.sub-menu li,.widget_pages ul.children li{padding-left:15px}
 .widget_search .search-form input[type="submit"]{display:none}
 .widget select{max-width:100%}
 .comment .children{margin-left:1.5em}
 .entry-meta{clear:both}
 nav form.tk-page-nav,nav .input-group,nav .input-group-btn,nav .form-control{display:inline}
-a{color:red}
+a{color:blue}
+.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.hero{position:relative;background-color:#eaeaea}
+.hero img{width:100%}
+.hero:after{content:"";position:absolute;z-index:1;bottom:0;left:0;pointer-events:none;background-image:-webkit-linear-gradient(top,rgba(255,255,255,0),white 90%);background-image:linear-gradient(to bottom,rgba(255,255,255,0),white 90%);width:100%;height:4em}
+.hero-cta{background-color:#eaeaea}
+.site-header-widget{text-align:right}
+.site-header-widget input[type=search]{border-radius:100px;height:28px}
+.site-header-widget form{text-align:right}
+.site-header-widget .widget_custom_html,.site-header-widget .widget_lsi_widget{display:inline-block}
+.site-header-widget .widget_custom_html{padding:0 10px}
+.site-header-widget .widget_custom_html .btn-primary{box-shadow:none}
+.site-navigation-inner{padding:0}
+.navbar-nav{float:none;text-align:center}
+.navbar-nav li{float:none;display:inline-block}
+.navbar-default{background:black;font-family:'Montserrat',sans-serif;text-transform:uppercase;font-weight:bold;border:0;border-radius:0;margin:0}
+.navbar-default .navbar-nav>li>a{color:white}
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{background:transparent;color:#00b0df}
+.navabr{min-height:0}
+.mobile-nav{text-align:center;padding:15px 30px;border-right:solid 1px #444;border-left:solid 1px #444;color:white}
+.mobile-nav:hover{background:#131313;cursor:pointer}
+*{font-family:'montserrat',sans-serif}
+* h1,* h2,* h3,* h4,* h5,* h6{color:black}
+* p{color:#3e3e3e}
+.no-padding{padding:0}
+.center{text-align:center}
+.default-padding{padding:5% 10%}
+a{color:#00b0df;font-weight:bold;-webkit-transition:all .4s ease;transition:all .4s ease}
+a:hover{color:black;text-decoration:none}
+.home-event-photo{max-width:100%;box-shadow:2px 2px 10px -1px #7d7d7d}
+.events-home{text-align:center}
+.events-home .col-md-4 a{color:black;-webkit-transition:all .4s ease;transition:all .4s ease}
+.events-home .col-md-4 a:hover,.events-home .col-md-4 a:focus,.events-home .col-md-4 a:active{color:#00b8e0;text-decoration:none}
+.events-home h2{border-bottom:solid #eaeaea 4px;padding-bottom:20px;font-weight:bold;margin-bottom:20px}
+.events-home h4{padding-bottom:10px;border-bottom:solid #eaeaea 4px;margin-bottom:2px;font-weight:bold}
+.events-home .col-md-4{padding-bottom:30px}
+.events-home .btn-primary{color:#fff;background-color:#000;border-radius:100px;border:0;font-size:18px;padding:10px 50px;-webkit-transition:all .5s ease;transition:all .5s ease}
+.events-home .btn-primary:hover{background-color:#47b6de}
+.events-home .photo-bg{background-color:#47b6de;max-width:500px;margin:0 auto}
+.events-home .photo-bg img{-webkit-transition:all .5s ease;transition:all .5s ease;width:100%}
+.events-home .photo-bg img:hover{opacity:.5}
+.bg-1{background:url(http://localhost:8888/RYP_tk/wp-content/uploads/2018/03/cross-hatch.jpg);background-size:cover;background-attachment:fixed}
+.bg-1 .btn,.bg-1 input{box-shadow:2px 2px 10px -1px #afafb0}
+.bg-2{background:url(https://images.unsplash.com/photo-1494094255046-3d8318b0ef3e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=de6e13b801e97815660fdf9f69918465&auto=format&fit=crop&w=800&q=80);background-size:cover;background-attachment:fixed}
+.bg-2 .btn,.bg-2 input{box-shadow:2px 2px 10px -1px #585858}
+.overlay{background:rgba(68,177,224,0.41)}
+.gray-bg{background:#eaeaea}
+.icon{margin-top:15px;margin-bottom:15px}
+.icon img{max-width:100px;display:block;margin:0 auto;-webkit-transition:all .5s ease;transition:all .5s ease}
+.icon img:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+.icon h4{text-align:center;border-bottom:solid 3px #eaeaea;padding-bottom:10px}
+.icon a{color:black}
+.icon a:hover{color:#00b0df}
+.btn{box-shadow:2px 2px 10px -1px #7d7d7d;-webkit-transition:all .5s ease;transition:all .5s ease}
+.btn-primary{background-color:#44b1e0;border-color:#44b1e0;border-radius:200px}
+.btn-primary:visited,.btn-primary:focus,.btn-primary:hover{background-color:black;border-color:black}
+.btn-primary .yikes-mailchimp-submit-button-span-text{color:white}
+.yikes-easy-mc-success-message,.yikes-mailchimp-container .yikes-easy-mc-success-message{color:#44b1e0;background:#d8e5ea;border-radius:100px}
+.hero-cta .yikes-easy-mc-form input[type=email]:focus,.hero-cta .yikes-easy-mc-form input[type=number]:focus,.hero-cta .yikes-easy-mc-form input[type=text]:focus,.hero-cta .yikes-easy-mc-form input[type=url]:focus,.hero-cta .yikes-easy-mc-form select:focus,.cta .yikes-easy-mc-form input[type=email]:focus,.cta .yikes-easy-mc-form input[type=number]:focus,.cta .yikes-easy-mc-form input[type=text]:focus,.cta .yikes-easy-mc-form input[type=url]:focus,.cta .yikes-easy-mc-form select:focus{outline:0}
+.hero-cta input,.cta input{border-radius:200px}
+.hero-cta label:focus,.cta label:focus{border:0}
+.hero-cta .yikes-easy-mc-form input[type=email],.hero-cta .yikes-easy-mc-form input[type=number],.hero-cta .yikes-easy-mc-form input[type=text],.hero-cta .yikes-easy-mc-form input[type=url],.hero-cta .yikes-easy-mc-form select,.cta .yikes-easy-mc-form input[type=email],.cta .yikes-easy-mc-form input[type=number],.cta .yikes-easy-mc-form input[type=text],.cta .yikes-easy-mc-form input[type=url],.cta .yikes-easy-mc-form select{padding:10px;border-color:#f1f1f1;background:white}
+.sponsors h3{text-align:center;border-bottom:solid 3px #eaeaea;padding-bottom:15px;margin-bottom:35px}
+.pum .yikes-easy-mc-form input[type=email],.pum .yikes-easy-mc-form input[type=number],.pum .yikes-easy-mc-form input[type=password],.pum .yikes-easy-mc-form input[type=text],.pum .yikes-easy-mc-form input[type=url],.pum .yikes-easy-mc-form select,.pum .yikes-easy-mc-form textarea{border-radius:100px}
+.pum .yikes-easy-mc-form input[type=email]:focus,.pum .yikes-easy-mc-form input[type=number]:focus,.pum .yikes-easy-mc-form input[type=text]:focus,.pum .yikes-easy-mc-form input[type=url]:focus,.pum .yikes-easy-mc-form select:focus{outline:0}
+.pum h3{border-bottom:solid 3px #eaeaea;padding-bottom:10px}
+.tagline .btn{font-size:18px;padding:10px 50px}
+.main-footer{background:#eaeaea;padding:15px 30px}
+.main-footer .footer{margin:15px 0}
+.main-footer a{color:#000;font-weight:bold}
+.main-footer a:hover{color:#00b0df}
+.main-footer h4{border-bottom:solid 3px #e2e0e0;padding-bottom:10px}
+.main-footer .boardLinks{margin-top:30px;font-size:13px}
+.site-info{background:black;padding:10px}
+.site-info p{color:white}
+.site-info a{font-weight:bold;color:#fff}
+.site-info a:hover{color:#00b0df}
+.footer-menu{padding-top:10px}
+.footer-menu li{display:inline-block}
+.footer-menu li a{border-right:thin solid #dcdcdc;padding-right:5px;font-size:12px;font-weight:500}
+.footer-menu li:last-child>a{border-right:0}
+.left{text-align:left}
+.right{text-align:right}
+@media screen and (min-width:992px){.hero-cta label,.cta label{margin-bottom:0 !important}
+.hero-cta .yikes-easy-mc-form input[type=email],.hero-cta .yikes-easy-mc-form input[type=number],.hero-cta .yikes-easy-mc-form input[type=text],.hero-cta .yikes-easy-mc-form input[type=url],.hero-cta .yikes-easy-mc-form select,.cta .yikes-easy-mc-form input[type=email],.cta .yikes-easy-mc-form input[type=number],.cta .yikes-easy-mc-form input[type=text],.cta .yikes-easy-mc-form input[type=url],.cta .yikes-easy-mc-form select{margin-bottom:0}
+}@media screen and (max-width:992px){.hero:after{height:2em}
+.hero-cta .yikes-easy-mc-form label.label-inline,.hero-cta .yikes-easy-mc-form .submit-button-inline-label,.cta .yikes-easy-mc-form label.label-inline,.cta .yikes-easy-mc-form .submit-button-inline-label{width:45%;float:none}
+}@media screen and (max-width:768px){.site-header .container-fluid{padding:15px}
+.hero:after{height:1em}
+.site-header-widget{text-align:center}
+.site-header-widget form{text-align:center}
+.hero-cta .yikes-easy-mc-form label.label-inline,.hero-cta .yikes-easy-mc-form .submit-button-inline-label,.cta .yikes-easy-mc-form label.label-inline,.cta .yikes-easy-mc-form .submit-button-inline-label{width:100%;padding:0}
+}@media(max-width:768px){.navbar-nav>li{display:block}
+.lsi-social-icons,.site-branding{text-align:center !important}
+}

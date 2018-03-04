@@ -30,8 +30,8 @@ function _tk_custom_header_setup() {
 		add_theme_support( 'custom-header', apply_filters( '_tk_custom_header_args', array(
 			'default-image'          => '',
 			'default-text-color'     => '000',
-			'width'                  => 1170,
-			'height'                 => 250,
+			'width'                  => 2500,
+			'height'                 => 750,
 			'flex-height'            => true,
 			'wp-head-callback'       => '_tk_header_style',
 			'admin-head-callback'    => '_tk_admin_header_style',
