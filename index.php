@@ -13,11 +13,19 @@
 
 get_header(); ?>
 
+	<div class="container-fluid" id="content">
+
+	<div class="row">
+		<div class="col-xs-12 center bg-1">
+			<?php single_post_title( '<h1>', '</h1>' ); ?>
+		</div>
+	</div>
 	<?php if ( have_posts() ) : ?>
 
+	<div class="fixed row">
+		<div class="col-md-9">
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-
 			<?php
 				/* Include the Post-Format-specific template for the content.
 				 * If you want to overload this in a child theme then include a file
@@ -27,7 +35,14 @@ get_header(); ?>
 			?>
 
 		<?php endwhile; ?>
-
+		</div>
+		<div class="sidebar col-md-3 hidden-sm">
+			<?php if (dynamic_sidebar( 'sidebar-1' ) ) : 
+					get_sidebar('sidebar-1');
+					endif;
+				?>
+		</div>
+	</div>
 		<?php // _tk_content_nav( 'nav-below' ); ?>
         <?php _tk_pagination(); ?>
 

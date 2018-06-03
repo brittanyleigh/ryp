@@ -10,11 +10,15 @@
 get_header(); ?>
 
 	<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
-	<div class="content-padder">
+	<div class="content-padder container-fluid">
+
+	
 
 		<?php if ( have_posts() ) : ?>
 
 			<header>
+				<div class="row">
+				<div class="col-xs-12 center bg-1">
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
@@ -72,11 +76,14 @@ get_header(); ?>
 						printf( '<div class="taxonomy-description">%s</div>', $term_description );
 					endif;
 				?>
+			</div>
+			</div>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<div class="fixed row">
+			<div class="col-md-9">
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to overload this in a child theme then include a file
@@ -86,7 +93,14 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
+			</div>
+			<div class="sidebar col-md-3 hidden-sm hidden-xs">
+			<?php if (dynamic_sidebar( 'sidebar-1' ) ) : 
+					get_sidebar('sidebar-1');
+					endif;
+				?>
+		</div>
+		</div>
 			<?php // _tk_content_nav( 'nav-below' ); ?>
             <?php _tk_pagination(); ?>
 		<?php else : ?>
@@ -97,5 +111,4 @@ get_header(); ?>
 
 	</div><!-- .content-padder -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

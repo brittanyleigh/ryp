@@ -17,7 +17,7 @@
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -33,7 +33,9 @@
 					<?php
 					// check to see if the logo exists and add it to the page
 					if ( get_theme_mod( 'logo' ) ) : ?> 
-					<img src="<?php echo get_theme_mod( 'logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" >
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<img src="<?php echo get_theme_mod( 'logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" >
+					</a>
 					<?php // add a fallback if the logo doesn't exist
 					else : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -58,20 +60,20 @@
 		<div class="row">
 			
 			<div class="site-navigation-inner col-xs-12">
-					<div class="navbar navbar-default">
+					<div class="navbar navbar-default container-fluid">
 						<div class="navbar-header row">
-							<a href="http://localhost:8888/RYP_tk/events">
+							<a href="/events">
 								<div class="col-xs-4 hidden-sm hidden-md hidden-lg mobile-nav mn-1">
-									EVENTS
+									<i class="far fa-calendar-alt"></i> EVENTS
 								</div>
 							</a>
-							<a href="http://localhost:8888/RYP_tk/contact">
+							<a href="/contact">
 								<div class="col-xs-4 hidden-sm hidden-md hidden-lg mobile-nav mn-2">
-									CONTACT
+									<i class="far fa-envelope"></i> CONTACT
 								</div>
 							</a>
 							<div class="col-xs-4 hidden-sm hidden-md hidden-lg mobile-nav mn-3" data-toggle="collapse" data-target="#navbar-collapse">
-								MORE
+								<i class="fas fa-angle-down"></i> MORE
 							</div>
 							<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
 							<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
@@ -107,6 +109,6 @@
 
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container-fluid" id="content">
+
 			
 

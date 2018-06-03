@@ -237,3 +237,90 @@ array(
 }
 add_action('customize_register', 'ryp_tk_new_customizer_settings');
 
+
+
+/* EVENTS */
+// Changes the escerpt length for events to 100 words
+function custom_excerpt_length( $length ) {
+  if( tribe_is_event() && is_archive() ) { 
+    return 50;
+  } else {
+  	return 50;
+  }
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function wpdocs_excerpt_more( $more ) {
+    return '.....';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+/* Board Member Custom Post Type */
+// Register Custom Post Type
+// Register Custom Post Type
+function custom_post_type() {
+
+	$labels = array(
+		'name'                  => 'Board Members',
+		'singular_name'         => 'Board Member',
+		'menu_name'             => 'Board Members',
+		'name_admin_bar'        => 'Board Members',
+		'archives'              => 'Board Members Archives',
+		'attributes'            => 'Board Members Attributes',
+		'parent_item_colon'     => 'Parent Board Member:',
+		'all_items'             => 'All Board Members',
+		'add_new_item'          => 'Add New Board Member',
+		'add_new'               => 'Add New Board Member',
+		'new_item'              => 'New Board Member',
+		'edit_item'             => 'Edit Board Member',
+		'update_item'           => 'Update Board Member',
+		'view_item'             => 'View Board Member',
+		'view_items'            => 'View Board Member',
+		'search_items'          => 'Search Board Member',
+		'not_found'             => 'Board Member Not found',
+		'not_found_in_trash'    => 'Not found in Trash',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+		'insert_into_item'      => 'Insert into Board Member',
+		'uploaded_to_this_item' => 'Uploaded to this Board Member',
+		'items_list'            => 'Board Members list',
+		'items_list_navigation' => 'Board Members list navigation',
+		'filter_items_list'     => 'Filter Board Members list',
+	);
+	$args = array(
+		'label'                 => 'Board Member',
+		'description'           => 'Board Members',
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-groups',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'board', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
+
+add_action( 'pre_get_posts', 'my_change_sort_order'); 
+    function my_change_sort_order($query){
+        if(is_post_type_archive('board')):
+         //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
+           //Set the order ASC or DESC
+           $query->set( 'order', 'ASC' );
+           //Set the orderby
+           $query->set( 'orderby', 'menu_order' );
+        endif;    
+    };

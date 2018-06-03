@@ -9,7 +9,7 @@
 get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
-
+<div class="container-fluid" id="content">
 	<div class="row">
 		<div class="col-xs-12 hero-cta center default-padding bg-1">
 			<?php if (dynamic_sidebar( 'hero' ) ) : 

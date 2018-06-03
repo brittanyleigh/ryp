@@ -10,10 +10,15 @@
 
 <section class="no-results not-found">
 	<header>
-		<h1 class="page-title"><?php _e( 'Nothing Found', '_tk' ); ?></h1>
+		<div class="row">
+			<div class="col-xs-12 center bg-1">
+				<h1 class="page-title"><?php _e( 'Nothing Found', '_tk' ); ?></h1>
+			</div>
+		</div>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="page-content row fixed center">
+		<div class="col-xs-12">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', '_tk' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
@@ -29,5 +34,6 @@
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
+		</div>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

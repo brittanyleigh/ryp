@@ -190,7 +190,7 @@ function _tk_posted_on() {
 		esc_html( get_the_date() )
 	);
 
-	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
+	$time_string = sprintf( '<span class="time">%3$s</span>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		$time_string
@@ -202,7 +202,7 @@ function _tk_posted_on() {
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
 		);
-		$time_string_update = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
+		$time_string_update = sprintf( '<span class="updated">%3$s</span>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			$time_string_update
@@ -212,7 +212,7 @@ function _tk_posted_on() {
 
 	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', '_tk' ),
 		$time_string,
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+		sprintf( '<span class="author vcard">%3$s</span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', '_tk' ), get_the_author() ) ),
 			esc_html( get_the_author() )
